@@ -1,3 +1,5 @@
+/* navbar */
+
 * {
   box-sizing: border-box;
 }
@@ -11,7 +13,7 @@ header.open {
 }
 header {
   position: fixed;
-  background-color: white;
+  background-color: #7ea8c4;
   right: -150px;
   height: 100%;
   padding: 1rem;
@@ -20,7 +22,7 @@ header {
 }
 
 header span {
-  color: black;
+  color: #ebecea;
 }
 
 header nav {
@@ -29,7 +31,7 @@ header nav {
 
 header nav a {
   display: block;
-  color: black;
+  color: #ebecea;
   text-decoration: none;
   margin: 0.5rem 0;
 }
@@ -58,4 +60,36 @@ header nav a {
   header.open {
     transform: translateX(0);
   }
+}
+
+/* footer */
+
+footer {
+  background-color: #7ea8c4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .footer-content {
+  display: flex;
+  width: 800px;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+footer .footer-content div {
+  display: flex;
+  flex-direction: column;
+  color: #ebecea;
+}
+
+footer .footer-content div a {
+  text-decoration: none;
+  color: #ebecea;
+}
+
+footer p {
+  color: #ebecea;
+  font-size: 12px;
 }
