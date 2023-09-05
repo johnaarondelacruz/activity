@@ -36,9 +36,13 @@ header nav {
 
 header nav a {
   display: block;
+<<<<<<< HEAD:style.css
+  color: black;
+=======
   color: #ebecea;
+>>>>>>> 9dfd960aa0fee32b1e52b01f07ce44f19784a0e8:css/style.css
   text-decoration: none;
-  margin: 0.5rem 0;
+  margin: 0.5rem;
 }
 
 @media only screen and (min-width: 768px) {
