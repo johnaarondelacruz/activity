@@ -25,6 +25,11 @@ header span {
   color: #ebecea;
 }
 
+header img {
+  height: 30px;
+  width: 50px;
+}
+
 header nav {
   margin: 1.5rem 0;
 }
