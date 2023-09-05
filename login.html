@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/login.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <header>
+      <span>LOGO</span>
+      <nav>
+        <a href="./index.html">HOME</a>
+        <a href="">ABOUT</a>
+        <a href="contact.html">CONTACT</a>
+        <a href="./login.html">LOG-IN</a>
+      </nav>
+    </header>
+    <box-icon name="menu" id="menu"></box-icon>
+    <!-- login -->
+    <div class="wrapper login">
+      <div class="container">
+        <div class="col-left">
+          <div class="login-text">
+            <h2>Welcome!</h2>
+            <p>Create your account.<br />For Free!</p>
+            <a href="" class="btn">Sign Up</a>
+          </div>
+        </div>
+        <div class="col-right">
+          <div class="login-form">
+            <h2>Login</h2>
+            <form id="registerForm">
+              <p>
+                <label>Username/Email address<span>*</span></label>
+                <input
+                  id="username"
+                  type="text"
+                  placeholder="Username or Email"
+                  required
+                />
+              </p>
+              <p>
+                <label>Password<span>*</span></label>
+                <input
+                  id="password"
+                  type="password"
+                  placeholder="Password"
+                  required
+                />
+              </p>
+              <p><input type="submit" value="Sign In" /></p>
+              <p><a href="">Forgot password?</a></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const form = document.getElementById("registerForm");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        let username = document.getElementById("username");
+        let password = document.getElementById("password");
+
+        let hasUpperCase = false;
+        let isEightCharactersLong = username.value.length >= 8;
+
+        for (let index = 0; index < username.value.length; index++) {
+          if (
+            username.value.charAt(index) ===
+            username.value.charAt(index).toUpperCase()
+          ) {
+            hasUpperCase = true;
+          }
+        }
+
+        console.log(hasUpperCase);
+
+        if (
+          username.value &&
+          isEightCharactersLong &&
+          hasUpperCase &&
+          password.value
+        ) {
+          console.log("Username detected");
+          console.log(username.value);
+          console.log(password.value);
+          username.classList.remove("error");
+        } else {
+          username.classList.add("error");
+        }
+      });
+
+      <!-- footer -->
+
+      <footer>
+        <div class="footer-content">
+          <div>
+            <h3>Quick Links</h3>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </div>
+          <div>
+            <h3>Social Media Links</h3>
+            <a href="#">Facebook</a>
+            <a href="#">X</a>
+            <a href="#">Instagram</a>
+          </div>
+          <div>
+            <h3>Subscribe to our newsletter</h3>
+            <input type="email" placeholder="Your Email" />
+          </div>
+        </div>
+        <p>&copy; 2023. All rights reserved</p>
+      </footer>;
+    </script>
+    <script src="./js/login.js"></script>
+  </body>
+</html>
